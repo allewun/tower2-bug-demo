@@ -7,27 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
-@import UIKit;
-
 
 @protocol Tower2TestClassDelegate <NSObject>
 @end
 
-
 @interface Tower2TestClass : NSObject
++ (void)initWithOptions:(NSDictionary *)data;
 
-@property (nonatomic, weak) id<Tower2TestClassDelegate> delegate;
-@property (nonatomic, strong) UIColor* primaryColor;
-@property (nonatomic, copy) NSString* Tower2TestString;
-
-+ (Tower2TestClass *)sharedInstance;
-+ (void)initWithOptions:(NSDictionary *)optionsDictionary;
-+ (NSBundle *)frameworkBundle;
-+ (UIImage *)frameworkImage:(NSString *)name ofType:(NSString *)type;
-
-
-#pragma mark - Test Functions. Not to be included in the final release
+// TEMPORARY / TODO: remove later
 + (NSArray *)temp_getTestViewControllerClasses;
-+ (Class)temp_getClassFromString:(NSString *)string;
-
 @end
